@@ -1,4 +1,4 @@
-(function(){
+$( document ).ready(function() {
 	var d = document,
 	accordionToggles = d.querySelectorAll('.js-accordionTrigger'),
 	setAria,
@@ -53,4 +53,4 @@ switchaccordion = function(e) {
     }
     accordionToggles[i].addEventListener('click', switchaccordion, false);
   }
-})();
+});
