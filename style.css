@@ -1,0 +1,541 @@
+/*
+* Foundation classes
+*/
+
+.large-10{
+  position: relative;
+  width: 100%;
+}
+
+.large-3 {
+  position: relative;
+  width: 30%;
+}
+
+.large-5 {
+  position: relative;
+  width: 50%;
+}
+
+.column, .columns {
+  position: relative;
+  padding-left: 1.364em;
+  padding-right: 1.364em;
+  float: left;
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 108em;
+}
+
+.left {
+  float: left!important;
+}
+
+img, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**/
+
+/*
+  * Accordion
+*/
+
+.cms-wrapper > * {
+    box-sizing: border-box;
+}
+
+.cms-wrapper dl{
+    border-bottom: 5px solid rgb(234, 234, 234);
+}
+
+.accordion dd {
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-left: 0px;
+}
+
+.accordion {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.cms-wrapper .accordionTitle {
+    text-align: left;
+    font-weight: 700;
+    padding: 13px;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #FD840E;
+    color: rgb(242, 242, 242);
+    cursor: pointer;
+    text-transform: uppercase;
+    font: bold 23px 'Rawengulk', Arial, Helvetica, sans-serif;
+}
+
+.accordionTitle:after {
+    content: "+";
+    font-size: 1.5em;
+    line-height: 0.5em;
+    float: right;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.accordionTitle:hover {
+    background-color: #FF9833;
+}
+
+.accordionTitleActive, .accordionTitle.is-expanded {
+    background-color: #F2F2F2;
+    border-bottom: 3px solid rgb(253, 132, 14);
+    color: rgb(253, 132, 14);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.accordionTitleActive:after, .accordionTitle.is-expanded:after {
+    -webkit-transform: rotate(-225deg);
+    -ms-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+}
+
+.accordionItem {
+    height: auto;
+    overflow: hidden;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
+}
+
+@media screen and (min-width: 48em) {
+    .accordionItem {
+        -webkit-transition: max-height 0.5s;
+        transition: max-height 0.5s;
+    }
+}
+
+.accordionItemCollapsed, .accordionItem.is-collapsed {
+    max-height: 0;
+}
+
+.accordion-content article h3{
+  text-transform: uppercase;
+  color: #fd840e;
+  font-size: 15px;
+}
+
+.accordion-content article:first-of-type h3{
+  margin-top: 0;
+}
+.cms-topic-accordion{
+  margin: 10px 0;
+}
+.cms-topic-accordion a{
+  color: rgb(253, 132, 14) !important;
+}
+
+.cms-sub-title{
+  color: rgb(253, 132, 14);
+  font: 20px bold 'Rawengulk', Arial, Helvetica, sans-serif;
+  margin: 30px 0;
+  font-weight: 800;
+}
+
+/**/
+
+/*
+  * Menu
+*/
+
+  nav.cms-nav {
+    background: #000000;
+    width: 100%;
+    text-transform: uppercase;
+    font: 11px Arial, Helvetica, sans-serif;
+  }
+
+  nav.cms-nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav.cms-nav ul li {
+    list-style: none;
+    text-align: center;
+    border-right: 1px solid #fff;
+  }
+
+  nav.cms-nav ul li:last-child {
+    border-right: none;
+  }
+
+  nav.cms-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 10px 0;
+  }
+
+  nav.cms-nav ul li a:hover, nav.cms-nav ul li a.active{
+    background: #FD840E;
+    color: #FFFFFF;
+  }
+
+  nav.cms-nav ul li a, nav.cms-nav ul li a:hover {
+    transition: 0.1s linear;
+    -webkit-transition: 0.1s linear;
+    -moz-transition: 0.1s linear;
+    -o-transition: 0.1s linear;
+  }
+
+  nav.cms-nav {
+    display: table;
+    table-layout: fixed;
+  }
+
+  nav.cms-nav ul {
+    display: table-row;
+  }
+
+  nav.cms-nav ul li {
+    display: table-cell;
+  }
+
+  /* styles for size's menu*/
+
+  nav.cms-nav span{ 
+    background-color: #FFF; 
+    color: #000;
+    padding: 10px 0;
+    display: block;
+    font-weight: 600;
+  }
+  
+.cms-arrow-back{
+  width: 8%;
+}
+
+/**/
+
+/*
+  * Titles
+*/
+
+.cms-wrapper h1{
+  font-size: 28px;
+  font-family: 'Rawengulk', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.cms-wrapper h2{
+  font-size: 23px;
+  font-family: 'Rawengulk', Helvetica, sans-serif;
+  margin: 30px;
+}
+
+.cms-side-title {
+  font-family: "Oswald","Helvetica Neue",Helvetica,Arial;
+  font-size: 18px;
+  color: #FD840E;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+
+.cms-side-title span {
+  background: #fff;
+  padding: 0px 8px 0px 0px;
+  position: relative;
+  top: -13px;
+  font-weight: 500;
+}
+
+.cms-side-title:before {
+  content: ' ';
+  width: 100%;
+  height: 6px;
+  display: block;
+  background-color: #FD840E;
+}
+
+.cms-title-right {
+  color: #2d2d2d;
+  font-family: 'Oswald';
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: right;
+}
+
+.cms-title-right:before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #2d2d2d;
+  vertical-align: top;
+  margin: 5px;
+}
+
+/*
+  * Others
+*/
+
+.cms-wrapper p{
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.cms-sep-topic{
+  margin-top: 50px;
+}
+
+.cms-wrapper hr{
+  border: 1px solid #FD840E;
+  margin-bottom: 50px;
+}
+
+.cms-topic-accordion {
+  margin: 10px 0;
+}
+
+.cms-important {
+  display: block;
+  padding: 15px;
+  border: 2px solid #F2F2F2;
+  margin-top: 16px;
+}
+
+.cms-heavy {
+  background-color: #FFFFFF;
+  text-transform: uppercase;
+  color: #FD840E;
+  padding: 1px 5px;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: -23px;
+  width: 108px;
+  margin-bottom: 10px;
+}
+
+.cms-rules .cms-important p {
+  font-weight: 600;
+}
+
+.cms-rules p {
+  font: 14px Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: #454545;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.cms-word-footer {
+  margin: 20px 0;
+  border-left: 2px solid rgb(253, 132, 14);
+  padding: 3px 10px;
+}
+
+.cms-numeral-list{
+  list-style: none;
+}
+
+.cms-highlight {
+  color: #FD840E;
+  font: 20px bold 'Rawengulk', Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.cms-opacity:hover{
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  -webkit-opacity: 0.8;
+}
+
+.cms-transition,
+.cms-transition:hover{
+  -webkit-transition: 300ms all ease;
+  -moz-transition: 300ms all ease;
+  -o-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+/*
+  * Arrows
+*/
+
+/* Right */
+
+.cms-call-to-action-1{
+  text-transform: uppercase;
+  color: #FD840E;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.cms-call-to-action-1:after{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FD840E;
+  content: '';
+  vertical-align: bottom;
+  margin-left: 5px;
+}
+
+/* Left */
+
+.cms-call-to-action-2{
+  text-transform: uppercase;
+  color: #FD840E;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.cms-call-to-action-2:after{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 5px solid #FD840E;
+  content: '';
+  vertical-align: bottom;
+  margin-left: 5px;
+}
+
+/* Up */
+
+.cms-call-to-action-3{
+  text-transform: uppercase;
+  color: #FD840E;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.cms-call-to-action-3:after{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #FD840E;
+  content: '';
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Down */
+
+.cms-call-to-action-4{
+  text-transform: uppercase;
+  color: #FD840E;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.cms-call-to-action-4:after{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FD840E;
+  content: '';
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* */
+
+.cms-transition, .cms-transition:hover, .cms-transition img, .cms-transition:hover img {
+  -webkit-transition: 600ms all ease;
+  -moz-transition: 600ms all ease;
+  -o-transition: 600ms all ease;
+  transition: 600ms all ease;
+}
+
+.cms-banner-w-hover {
+  display: block;
+}
+
+.cms-gradient-hover:hover{
+  background-color: #E00109;
+  background-blend-mode: lighten;
+  background-image: linear-gradient(135deg,#DC9425,#292484);
+}
+
+.cms-black-hover{
+  background-color: #000;
+}
+
+.cms-banner-w-hover img{
+  width: 100%;
+}
+
+.cms-banner-w-hover:hover img {
+  opacity: 0.7;
+}
+
+.cms-bg-banner{
+  width: 100%;
+  height: 300px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cms-bg-banner:hover{
+  
+}
+
+.cms-bg-banner-1{
+  background-image: url(https://terrorjapanese.files.wordpress.com/2013/11/red-face-dark-girl-anime-wallpaper-1.jpg);
+  
+}
+
+.cms-bg-banner-1:hover{
+  background-blend-mode: lighten;
+  background-color: #F00;
+}
+
+.cms-bg-banner-2{
+   background-image: url(http://4everstatic.com/pictures/674xX/cartoons/anime-and-fantasy/mask,-anime-boy-162834.jpg);
+}
+
+.cms-bg-banner-2:hover{
+  background-blend-mode: luminosity;
+  background-color: #5066FF;
+}
